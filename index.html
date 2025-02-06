@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtueller Glückskeks für Urazzz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #fdf6e3;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .cookie {
+            background-color: #ffcc66;
+            border: none;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .message {
+            font-size: 1.5rem;
+            color: #555;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Virtueller Glückskeks für Urazzz</h1>
+    <div class="cookie" onclick="openCookie()">Klicken!</div>
+    <p class="message" id="message">&nbsp;</p>
+
+    <script>
+        const sprueche = [
+            "Du bist unglaublich schlau!",
+            "Dein Lächeln bringt die Sonne zum Strahlen!",
+            "Niemand ist so witzig wie du!",
+            "Du bist ein echtes Genie!",
+            "Deine Ausstrahlung ist einfach fantastisch!",
+            "Du hast die besten Ideen!",
+            "Du bist charmant und liebenswert!",
+            "Dein Stil ist einfach unschlagbar!",
+            "Du machst die Welt zu einem besseren Ort!",
+            "Dein Humor ist legendär!"
+        ];
+
+        function openCookie() {
+            const randomIndex = Math.floor(Math.random() * sprueche.length);
+            const message = sprueche[randomIndex];
+            document.getElementById('message').textContent = message;
+        }
+    </script>
+</body>
+</html>
